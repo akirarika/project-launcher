@@ -7,7 +7,7 @@ PROJECT_NAME=$2
 if [ ! -n "$2" ]; then 
     PROJECT_NAME="$(basename "`pwd`")"
 fi
-if [ "$2" == "global" ]; then 
+if [ "$2" == "-g" ]; then 
     PROJECT_NAME=`cat $(pwd)/../.cntrLst`
 fi
 
@@ -83,8 +83,8 @@ if [ "$1" == "init" ]; then
 fi
 
 if [ "$1" == "clear" ]; then 
-    sudo docker stop $(docker ps -a -q)
-    sudo docker container prune -force
+    sudo docker stop $(sudo docker ps -a -q)
+    sudo docker container prune --force
     exit
 fi
 
