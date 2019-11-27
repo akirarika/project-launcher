@@ -13,7 +13,10 @@
 
 首先，在克隆此仓库到本地后，请运行 `./pls install` 来安装此脚本（执行此命令后，会在 /usr/bin 放置一个此脚本的软链接，之后在任意位置，都可以直接使用本脚本）
 ```shellscript
+# linux or mac
 cd /usr/local && sudo git clone https://github.com/akirarika/project-launcher.git && cd project-launcher && sudo chmod +x ./pls && ./pls install
+# wsl1
+cd /usr/local && sudo git clone https://github.com/akirarika/project-launcher.git && cd project-launcher/wsl && sudo chmod +x ./pls && ./pls install
 ```
 
 接着，您需要按照一下格式来编排目录
