@@ -13,12 +13,6 @@ fi
 
 cd `pwd` && cd ..
 
-if [ `whoami` = "root" ];then
-	echo "您不应当使用 Root 身份来运行脚本。"
-    echo " - 当部分命令需要 Root 身份时，脚本会自动 sudo 并要求您赋权"
-    exit
-fi
-
 if [ "$1" == "test" ]; then 
     echo `pwd`
     echo $SHELL_PATH
